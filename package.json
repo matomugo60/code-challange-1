@@ -1,0 +1,19 @@
+{
+  "name": "code-challange-1",
+  "version": "1.0.0",
+  "description": "code challange ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matomugo60/code-challange-1.git"
+  },
+  "author": "Martin Mugo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matomugo60/code-challange-1/issues"
+  },
+  "homepage": "https://github.com/matomugo60/code-challange-1#readme"
+}
