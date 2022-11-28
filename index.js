@@ -36,7 +36,7 @@ function carSpeedDetector(carSpeed) {
     const speedLimit = 70
     const speedRate = 5
 
-// If statement to print Ok if carspeed is below 70
+// If statement to print Ok if carspeed is below or equal to 70
     if (carSpeed <= 70) {
         return "OK"
     }
