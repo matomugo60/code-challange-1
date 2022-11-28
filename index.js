@@ -44,7 +44,7 @@ function carSpeedDetector(carSpeed) {
     const excessCarSpeed = carSpeed - speedLimit;
 
     let demeritPoints = 0;
-    //Using for statement to set values to be used in excessSpeed
+    //Using for loop statement to set values to be used in excessSpeed and setting an increment operator
     for( let i=0; i < excessCarSpeed; i+= speedRate ) {
         demeritPoints += 1
         // If statement to return License Suspended using demeritPoints > 12
