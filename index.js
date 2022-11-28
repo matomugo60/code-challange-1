@@ -1,3 +1,5 @@
+//Challenge 1: Student Grade Generator (Toy Problem)
+
 // Defining a function (gradeCalculator) to set it as a function for the arguments score and total.
 
 let gradeCalculator = function (score, total) {
@@ -29,6 +31,7 @@ let result = gradeCalculator (54, 100)
 // Using console.log to display the result.
 console.log (result)
 
+// Challenge 2: Speed Detector (Toy Problem)
 
 // Defining variable carSpeedDetector and setting it as a function for argument carSpeed 
 
@@ -59,35 +62,95 @@ function carSpeedDetector(carSpeed) {
 // Using console.log to print the result
 console.log (carSpeedDetector (157));
 
+// Challenge 3: Net Salary Calculator (Toy Problem)
 
+// Setting values for calculating grossSalary
+var grossSalary = basicSalary + benefits
+var basicSalary = 32000
+var benefits = 10000
 
-// Defining variable grossSalary and setting it as a function for payCheck and totalDeductions
-var grossSalary = function (payCheckMonthly = 24000 - totalDeductions ) {
-    var totalDeductions = deductionNSSF + deductionKRA + deductionNHIF
-    var deductionNSSF = (payCheckMonthly * 6) / 100
-    var deductionKRA = (payCheckMonthly * 10) / 100
-    var deductionNHIF = 700
-// Applying if else and else if statements to bring about different outcomes to the grossSalary
-    if (payCheckMonthly <= 24000) {
-        deductionNSSF  
-        deductionKRA = (payCheckMonthly * 10) / 100
-        deductionNHIF = 700
-    } else if (payCheckMonthly >=24001) {
-        deductionNSSF 
-        deductionKRA = (payCheckMonthly * 25) / 100
-        deductionNHIF = 900
-    } else if(payCheckMonthly >= 32333) {
-        deductionNSSF
-        deductionKRA = (payCheckMonthly * 30) / 100
-        deductionNHIF = 100
-
+// Setting nssf as a function to get amount from grossSalary
+const nssf = function (grossSalary) {
+    // Using if else statements to create different outcomes
+    if (grossSalary > 6000) {
+        return 6000 * 0.06
+    } else if (grossSalary <= 6000) {
+        return grossSalary *  0.06
+    } else {
+        return 0
     }
-
 }
-// Using variable netSalary to call grossSalary with the value of 26700 on payCheckMonthly
-let netSalary = grossSalary (26700)
-// Printing the result 
-console.log(netSalary)
+
+// Using nhif as a function to set amount from grossSalary
+const nhif = function (grossSalary) {
+    // Using if else statements to provide outcomes for different conditions
+    if (grossSalary < 6000) {
+        return 150
+    } else if ( grossSalary >= 6000 && grossSalary < 8000 ) {
+        return 300
+    } else if (grossSalary >= 8000 && grossSalary < 12000) {
+        return 400
+    } else if (grossSalary >= 12000 && grossSalary < 15000) {
+        return 500
+    } else if (grossSalary >= 15000 && grossSalary < 20000) {
+        return 600
+    } else if (grossSalary >= 20000 && grossSalary < 25000) {
+        return 750
+    } else if (grossSalary >= 25000 && grossSalary < 30000) {
+        return 850 
+    } else if (grossSalary >= 30000 && grossSalary < 35000) {
+        return 900
+    } else if (grossSalary >= 35000 && grossSalary < 40000) {
+        return 950
+    } else if (grossSalary >= 40000 && grossSalary < 45000) {
+        return 1000
+    } else if (grossSalary >= 45000 && grossSalary < 50000) {
+        return 1100
+    } else if (grossSalary >= 50000 && grossSalary < 60000) {
+        return 1200
+    } else if (grossSalary >= 60000 && grossSalary < 70000) {
+        return 1300
+    } else if (grossSalary >= 70000 && grossSalary < 80000) {
+        return 1400 
+    } else if (grossSalary >= 80000 && grossSalary < 90000) {
+        return 1500
+    } else if (grossSalary >= 90000 && grossSalary < 100000) {
+        return 1600
+    } else {
+        return 1700
+    }
+}
+
+// Setting a value for taxableIncome
+const taxableIncome = grossSalary - nssf
+
+//Setting value for kra
+const kra = function (taxableIncome) {
+    if (taxableIncome <= 24000) {
+        return taxableIncome * 0.1
+    } else if (taxableIncome <= 32333) {
+        return taxableIncome * 0.25
+    } else {
+        return taxableIncome * 0.3
+    }
+    
+}
+// Calculating netIncome
+var payeTax = kra - (personalRelief + insuranceRelief)
+var personalRelief = 2400
+var insuranceRelief = nhif * 0.15
+
+
+const netIncome = grossSalary - (taxableIncome + nssf + nhif)
+
+const netSalary = netIncome
+// printing message
+console.table(netSalary)
+
+
+
+
+
 
 
 
