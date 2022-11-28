@@ -45,7 +45,7 @@ function carSpeedDetector(carSpeed) {
 
     let demeritPoints = 0;
     //Using for statement to set values to be used in excessSpeed
-    for( let i=0; i < excessSpeed; i+= speedRate ) {
+    for( let i=0; i < excessCarSpeed; i+= speedRate ) {
         demeritPoints += 1
         // If statement to return License Suspended using demeritPoints > 12
         if(demeritPoints > 12) {
@@ -57,7 +57,8 @@ function carSpeedDetector(carSpeed) {
 }
 
 // Using console.log to print the result
-console.log (carSpeedDetector (57));
+console.log (carSpeedDetector (157));
+
 
 
 // Defining variable grossSalary and setting it as a function for payCheck and totalDeductions
