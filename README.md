@@ -23,7 +23,7 @@ To use this repository on your machine requires some simple steps
 ### Alternative One
 
 - Open a terminal / command line interface on your computer
-- Clone the repo by using the following:
+- Clone the repository by using the following:
 
         git clone https:git@github.com:matomugo60/code-challange-1.git
 
